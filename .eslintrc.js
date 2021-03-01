@@ -36,11 +36,6 @@ module.exports = {
     ecmaVersion: 2018
   },
   rules: {
-    'no-unused-vars': 'off',
-    // "@typescript-eslint/no-unused-vars": "warn",
-    '@typescript-eslint/camelcase': 'off',
-    camelcase: 'off',
-    '@typescript-eslint/no-explicit-any': 'off',
     '@typescript-eslint/member-delimiter-style': 'off',
     '@typescript-eslint/interface-name-prefix': 'off'
   }
