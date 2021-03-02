@@ -1,4 +1,4 @@
-export interface Vehicle {
+export interface IVehicle {
   id: string
   numberPlate: string
   brand: string
@@ -6,21 +6,23 @@ export interface Vehicle {
   registrationDate: Date
 }
 
-export interface Event {
+export interface IEvent {
+  id: string
   date: Date
+  vehicleId: string
 }
 
-export interface AdvertiseForSale extends Event {
+export interface IAdvertiseForSale extends IEvent {
   price: number
   mileageInKM: number
 }
 
-export interface RoadWorthyTest extends Event {
+export interface IRoadWorthyTest extends IEvent {
   mileageInKM: number
   result: "PASS" | "FAIL"
 }
 
-export interface ChangeOfNumberplate extends Event {
+export interface IChangeOfNumberplate extends IEvent {
   fromNumberPlate: string
   toNumberPlate: string
 }

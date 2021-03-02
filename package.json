@@ -8,7 +8,7 @@
     "dev": "nodemon --inspect src/index.ts",
     "lint": "eslint src/**/*.ts --cache",
     "lint:fix": "yarn lint --fix",
-    "test": "jest --coverage",
+    "test": "jest",
     "test:watch": "jest --watch"
   },
   "jest": {
