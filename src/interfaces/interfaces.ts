@@ -3,13 +3,14 @@ export interface IVehicle {
   numberPlate: string
   brand: string
   model: string
-  registrationDate: Date
+  registrationDate: string | number
 }
 
 export interface IEvent {
   id: string
-  date: Date
+  date: string | number
   vehicleId: string
+  type: "AdvertiseForSale" | "RoadWorthyTest" | "ChangeOfNumberplates"
 }
 
 export interface IAdvertiseForSale extends IEvent {

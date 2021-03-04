@@ -30,7 +30,9 @@
   },
   "author": "Khaled Osman",
   "license": "ISC",
-  "dependencies": {},
+  "dependencies": {
+    "moment": "^2.29.1"
+  },
   "devDependencies": {
     "@types/jest": "^26.0.20",
     "@types/node": "^14.14.31",
