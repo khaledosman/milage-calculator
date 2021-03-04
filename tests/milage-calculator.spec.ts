@@ -1,5 +1,6 @@
-import { calculateAverageAnnualMileage, estimateCurrentMileage } from '../src/index'
+import { calculateAverageAnnualMileage, estimateCurrentMileage, AllEvents } from '../src/index'
 import { convertMillisecondsToYears } from '../src/helpers/convert-ms-to-years'
+
 const dummyEvents = [
   {
     type: 'RoadWorthyTest',
@@ -48,7 +49,7 @@ const dummyEvents = [
     date: '2014-4-10',
     mileageInKM: 20000,
     result: 'PASS'
-  }
+  },
   {
     type: 'RoadWorthyTest',
     date: '2013-4-10',
@@ -58,14 +59,13 @@ const dummyEvents = [
 ]
 
 describe('Milage Calculator Tests', () => {
-  
   it('calculates annual average mileage correctly', () => {
-    expect(calculateAverageAnnualMileage(dummyEvents)).toBe(10000)
+    expect(calculateAverageAnnualMileage(dummyEvents as Array<AllEvents>)).toBe(10000)
   })
 
   it('estimates current mileage correctly', () => {
     const averageAnnualMileage = 10000
     const timeDifference = convertMillisecondsToYears(Date.now() - new Date(dummyEvents[0].date).getTime())
-    expect(estimateCurrentMileage(dummyEvents)).toBe(averageAnnualMileage * timeDifference)
+    expect(estimateCurrentMileage(dummyEvents as Array<AllEvents>)).toBe(averageAnnualMileage * timeDifference)
   })
 })
